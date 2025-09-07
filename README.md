@@ -50,7 +50,7 @@ Khi nạp chương trình lên vi điều khiển STM32F103:
 - Sau đó cả hai sẽ cùng tắt trong 500ms.  
 - Quá trình lặp lại liên tục với chu kỳ 1 giây. 
 ---
-# STM32 LED Toggle with Button (PC13 và PA12)
+# Bài 2- Yêu cầu 2: STM32 LED Toggle with Button (PC13 và PA12)
 
 ## Mô tả chương trình
 Chương trình này được viết cho vi điều khiển STM32F10x với mục đích điều khiển LED bằng nút nhấn:
