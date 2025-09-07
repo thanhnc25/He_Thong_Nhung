@@ -3,7 +3,7 @@
 #include "stm32f10x_rcc.h"
 
 void delay_1ms(unsigned int time);
-void LED_PC_13_Init();
+void LED_Init();
 
 int main()
 {
@@ -11,22 +11,30 @@ int main()
 	
 	while(1){
 		GPIO_SetBits(GPIOC, GPIO_Pin_13);
+		GPIO_SetBits(GPIOB, GPIO_Pin_13);
 		delay_1ms(500);
 		GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+		GPIO_ResetBits(GPIOB, GPIO_Pin_13);
 		delay_1ms(500);
 	}
 }
 
-void LED_PC_13_Init()
+void LED_Init()
 {
 	GPIO_InitTypeDef GPIO;
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+	
 	GPIO.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO.GPIO_Pin = GPIO_Pin_13;
 	GPIO.GPIO_Speed = GPIO_Speed_50MHz;
-	
 	GPIO_Init(GPIOC, &GPIO);
+	
+	GPIO.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO.GPIO_Pin = GPIO_Pin_9;
+	GPIO.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB, &GPIO);
 }
 	
 void delay_1ms(unsigned int time)
