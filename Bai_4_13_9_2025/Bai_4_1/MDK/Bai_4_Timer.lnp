@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+".\main.o"
+".\misc.o"
+".\stm32f10x_exti.o"
+".\stm32f10x_gpio.o"
+".\stm32f10x_rcc.o"
+".\stm32f10x_tim.o"
+".\startup_stm32f10x_md.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\Bai_4_Timer.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Bai_4_Timer.map" -o .\Bai_4_Timer.axf

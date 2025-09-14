@@ -1,0 +1,17 @@
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
+.\stm32f10x_gpio.o: D:\Nam_4\He_thong_nhung\Bai_tap\Bai_4_13_9_2025\Bai_4_2\MDK\RTE\RTE_Components.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm3.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h
+.\stm32f10x_gpio.o: D:\Nam_4\He_thong_nhung\Bai_tap\Bai_4_13_9_2025\Bai_4_2\MDK\RTE\Device\STM32F103C8\stm32f10x_conf.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_exti.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+.\stm32f10x_gpio.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc\misc.h
