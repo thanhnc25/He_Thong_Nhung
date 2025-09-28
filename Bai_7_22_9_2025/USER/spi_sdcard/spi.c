@@ -5,39 +5,42 @@ void SPI1_Setup(uint16_t spi_baurate)
     SPI_InitTypeDef SPI_InitStruct;    
     GPIO_InitTypeDef GPIO_InitStruct;
     
-    // Enable clock for Alternate Function I/O (AFIO)
+    // Bat clock cho Alternate Function (AFIO) 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);    
 
-		// Enable clock for GPIOA and SPI1 peripherals
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_SPI1, ENABLE);
+    // Bat clock cho GPIOA va SPI1
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_SPI1, ENABLE);
 		
-		// Configure PA5 as Alternate Function Push-Pull (SCK for SPI1)
-		GPIO_InitStruct.GPIO_Pin = GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;           					// Select PA5 pin
-		GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_PP;     // Set mode to Alternate Function Push-Pull
-		GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;   // Set GPIO speed to 50MHz
-		GPIO_Init(GPIOA, &GPIO_InitStruct);             								// Apply configuration to GPIOA
+    // --- Cau hinh chan PA5 (SCK), PA6 (MISO), PA7 (MOSI) ---
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7; // chon cac chan SPI1
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_PP;     // Alternate Function Push-Pull
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;   // toc do cao (50MHz)
+    GPIO_Init(GPIOA, &GPIO_InitStruct);              // ap dung cau hinh cho GPIOA
 
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-		GPIO_InitStruct.GPIO_Pin = GPIO_Pin_4;
-		GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_PP;
-		GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-		GPIO_Init(GPIOA, &GPIO_InitStruct);
-	
-		GPIOA->BSRR = GPIO_Pin_4;
-		
-    // Configure SPI peripheral settings
-    SPI_InitStruct.SPI_Direction = SPI_Direction_2Lines_FullDuplex; 	// Set SPI to full-duplex, 2-line mode
-    SPI_InitStruct.SPI_Mode = SPI_Mode_Master;                      			// Set SPI to Master mode
-    SPI_InitStruct.SPI_DataSize = SPI_DataSize_8b;                 	 			// Set data size to 8 bits
-    SPI_InitStruct.SPI_CPOL = SPI_CPOL_High;                         			// Clock polarity: idle low
-    SPI_InitStruct.SPI_CPHA = SPI_CPHA_2Edge;                       		// Clock phase: data captured on first edge
-    SPI_InitStruct.SPI_NSS = SPI_NSS_Soft;                          					// NSS (Slave Select) managed by software
-    SPI_InitStruct.SPI_BaudRatePrescaler = spi_baurate;             			// Set baud rate prescaler from input parameter
-    SPI_InitStruct.SPI_FirstBit = SPI_FirstBit_MSB;                 					// Data transmission starts with Most Significant Bit
-    SPI_InitStruct.SPI_CRCPolynomial = 7;                           						// CRC polynomial value (default is 7)
-    SPI_Init(SPI1, &SPI_InitStruct);                                									// Initialize SPI peripheral with settings
-    SPI_Cmd(SPI1, ENABLE);                                          								// Enable the SPI peripheral
+    // --- Cau hinh chan PA4 lam NSS/CS (dung phan mem dieu khien) ---
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_4;           // chon chan PA4
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_PP;    // Output Push-Pull
+    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;   // toc do cao
+    GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIOA->BSRR = GPIO_Pin_4;    // Dat PA4 = 1 (CS = High, khong chon slave)
+
+    // --- Cau hinh SPI1 ---
+    SPI_InitStruct.SPI_Direction = SPI_Direction_2Lines_FullDuplex;  // SPI full-duplex (MOSI + MISO)
+    SPI_InitStruct.SPI_Mode = SPI_Mode_Master;                       // SPI o che do Master
+    SPI_InitStruct.SPI_DataSize = SPI_DataSize_8b;                   // khung du lieu = 8 bit
+    SPI_InitStruct.SPI_CPOL = SPI_CPOL_High;                         // Clock idle o muc cao (CPOL=1)
+    SPI_InitStruct.SPI_CPHA = SPI_CPHA_2Edge;                        // Du lieu chot o canh xuong (CPHA=1)
+    // => CPOL=1, CPHA=1 tuong ung SPI mode 3
+    SPI_InitStruct.SPI_NSS = SPI_NSS_Soft;                           // Quan ly NSS bang phan mem (khong dung NSS cung)
+    SPI_InitStruct.SPI_BaudRatePrescaler = spi_baurate;              // Toc do SPI, lay tu tham so dau vao
+    SPI_InitStruct.SPI_FirstBit = SPI_FirstBit_MSB;                  // Truyen bit cao truoc (MSB first)
+    SPI_InitStruct.SPI_CRCPolynomial = 7;                            // Gia tri CRC mac dinh (it dung)
+
+    SPI_Init(SPI1, &SPI_InitStruct);   // Ap dung cau hinh cho SPI1
+    SPI_Cmd(SPI1, ENABLE);             // Bat SPI1
 }
+
 
 /**
  * @brief Set the SPI speed by adjusting the baud rate prescaler
