@@ -23,27 +23,26 @@ void DMA_Config_Channel1(uint32_t periphAddr, uint32_t memAddr, uint16_t size)
 
     DMA_Init(DMA1_Channel1, &DMA_InitStructure);
 
-    // Enable interrupt Transfer Complete
+ 
     DMA_ITConfig(DMA1_Channel1, DMA_IT_TC, ENABLE);
     NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
     DMA_Cmd(DMA1_Channel1, ENABLE);
 }
 
-/* Hàm dang ký callback */
+
 void DMA_SetCallback_Channel1(DMA_Callback_t cb)
 {
     dma1_ch1_callback = cb;
 }
 
-/* ISR DMA1 Channel1 */
+
 void DMA1_Channel1_IRQHandler(void)
 {
     if (DMA_GetITStatus(DMA1_IT_TC1))
     {
         DMA_ClearITPendingBit(DMA1_IT_TC1);
 
-        // G?i callback n?u có
         if (dma1_ch1_callback)
         {
             dma1_ch1_callback();
