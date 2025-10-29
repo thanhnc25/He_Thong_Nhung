@@ -24,8 +24,7 @@
 #define USE_WFI 1   // =1 dùng WFI (mặc định); =0 dùng WFE
 #endif
 
-static void Wakeup_PA0_EXTI_Falling_Init(void);git 
-
+static void Wakeup_PA0_EXTI_Falling_Init(void);
 // Hàm delay ms đơn giản bằng vòng lặp bận (không chính xác tuyệt đối nhưng đủ cho demo)
 static void delay_ms(uint32_t ms)
 {
