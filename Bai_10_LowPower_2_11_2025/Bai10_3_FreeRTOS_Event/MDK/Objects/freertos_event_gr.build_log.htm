@@ -1,0 +1,1685 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: �Vision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a CONGTHANH, aa, LIC=03C6R-KLREX-30UNC-7U1LV-4ZUPI-DFW5G
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\CONG THANH\OneDrive - ptit.edu.vn\LOP\Nam4_Ky1\HeThongNhung\He_Thong_Nhung\Bai_10_LowPower_2_11_2025\Bai10_3_FreeRTOS_Event\MDK\freertos_event_gr.uvprojx
+Project File Date:  10/29/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+../USER/gpio.cpp(1): warning: In file included from...
+../USER/gpio.h(14): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Speed {
+     ^
+../USER/gpio.h(20): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Mode {
+     ^
+../USER/gpio.h(31): warning: 'GpioPin' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+class GpioPin {
+      ^
+../USER/gpio.h(38): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        GpioPin(GPIO_TypeDef* port, uint16_t pin, GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                                     ^
+../USER/gpio.h(41): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        virtual void Configure(GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                  ^
+../USER/gpio.h(47): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Push_Pull(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                    ^
+../USER/gpio.h(48): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Open_Drain(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                     ^
+../USER/gpio.h(31): warning: padding size of 'GpioPin' with 2 bytes to alignment boundary [-Wpadded]
+class GpioPin {
+      ^
+../USER/gpio.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOA) return RCC_APB2Periph_GPIOA;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOA) return RCC_APB2Periph_GPIOA;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOA) return RCC_APB2Periph_GPIOA;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(497): note: expanded from macro 'RCC_APB2Periph_GPIOA'
+#define RCC_APB2Periph_GPIOA             ((uint32_t)0x00000004)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOB) return RCC_APB2Periph_GPIOB;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1324): note: expanded from macro 'GPIOB_BASE'
+#define GPIOB_BASE            (APB2PERIPH_BASE + 0x0C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOB) return RCC_APB2Periph_GPIOB;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOB) return RCC_APB2Periph_GPIOB;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(498): note: expanded from macro 'RCC_APB2Periph_GPIOB'
+#define RCC_APB2Periph_GPIOB             ((uint32_t)0x00000008)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOC) return RCC_APB2Periph_GPIOC;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1325): note: expanded from macro 'GPIOC_BASE'
+#define GPIOC_BASE            (APB2PERIPH_BASE + 0x1000)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOC) return RCC_APB2Periph_GPIOC;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOC) return RCC_APB2Periph_GPIOC;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(499): note: expanded from macro 'RCC_APB2Periph_GPIOC'
+#define RCC_APB2Periph_GPIOC             ((uint32_t)0x00000010)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOD) return RCC_APB2Periph_GPIOD;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1419): note: expanded from macro 'GPIOD'
+#define GPIOD               ((GPIO_TypeDef *) GPIOD_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1326): note: expanded from macro 'GPIOD_BASE'
+#define GPIOD_BASE            (APB2PERIPH_BASE + 0x1400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOD) return RCC_APB2Periph_GPIOD;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1419): note: expanded from macro 'GPIOD'
+#define GPIOD               ((GPIO_TypeDef *) GPIOD_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOD) return RCC_APB2Periph_GPIOD;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(500): note: expanded from macro 'RCC_APB2Periph_GPIOD'
+#define RCC_APB2Periph_GPIOD             ((uint32_t)0x00000020)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOE) return RCC_APB2Periph_GPIOE;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1420): note: expanded from macro 'GPIOE'
+#define GPIOE               ((GPIO_TypeDef *) GPIOE_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1327): note: expanded from macro 'GPIOE_BASE'
+#define GPIOE_BASE            (APB2PERIPH_BASE + 0x1800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOE) return RCC_APB2Periph_GPIOE;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1420): note: expanded from macro 'GPIOE'
+#define GPIOE               ((GPIO_TypeDef *) GPIOE_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOE) return RCC_APB2Periph_GPIOE;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(501): note: expanded from macro 'RCC_APB2Periph_GPIOE'
+#define RCC_APB2Periph_GPIOE             ((uint32_t)0x00000040)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(27): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOF) return RCC_APB2Periph_GPIOF;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1421): note: expanded from macro 'GPIOF'
+#define GPIOF               ((GPIO_TypeDef *) GPIOF_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1328): note: expanded from macro 'GPIOF_BASE'
+#define GPIOF_BASE            (APB2PERIPH_BASE + 0x1C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(27): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOF) return RCC_APB2Periph_GPIOF;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1421): note: expanded from macro 'GPIOF'
+#define GPIOF               ((GPIO_TypeDef *) GPIOF_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(27): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOF) return RCC_APB2Periph_GPIOF;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(502): note: expanded from macro 'RCC_APB2Periph_GPIOF'
+#define RCC_APB2Periph_GPIOF             ((uint32_t)0x00000080)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOG) return RCC_APB2Periph_GPIOG;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1422): note: expanded from macro 'GPIOG'
+#define GPIOG               ((GPIO_TypeDef *) GPIOG_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1329): note: expanded from macro 'GPIOG_BASE'
+#define GPIOG_BASE            (APB2PERIPH_BASE + 0x2000)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/gpio.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOG) return RCC_APB2Periph_GPIOG;
+                    ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1422): note: expanded from macro 'GPIOG'
+#define GPIOG               ((GPIO_TypeDef *) GPIOG_BASE)
+                             ^                ~~~~~~~~~~
+../USER/gpio.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (port == GPIOG) return RCC_APB2Periph_GPIOG;
+                                  ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(503): note: expanded from macro 'RCC_APB2Periph_GPIOG'
+#define RCC_APB2Periph_GPIOG             ((uint32_t)0x00000100)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(37): warning: use of old-style cast [-Wold-style-cast]
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+                               ^~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(496): note: expanded from macro 'RCC_APB2Periph_AFIO'
+#define RCC_APB2Periph_AFIO              ((uint32_t)0x00000001)
+                                          ^         ~~~~~~~~~~
+../USER/gpio.cpp(48): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        Configure(GPIO_Mode::INPUT_PULL_UP);
+                  ^
+../USER/gpio.cpp(53): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        Configure(GPIO_Mode::INPUT_PULL_DOWN);
+                  ^
+../USER/gpio.cpp(58): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        Configure(GPIO_Mode::INPUT_FLOATING);
+                  ^
+../USER/gpio.cpp(63): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        Configure(GPIO_Mode::OUT_PUSH_PULL, speed);
+                  ^
+../USER/gpio.cpp(68): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        Configure(GPIO_Mode::OUT_OPEN_DRAIN, speed);
+                  ^
+35 warnings generated.
+compiling gpio.cpp...
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(11): warning: In file included from...
+../USER/gpio.h(14): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Speed {
+     ^
+../USER/gpio.h(20): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Mode {
+     ^
+../USER/gpio.h(31): warning: 'GpioPin' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+class GpioPin {
+      ^
+../USER/gpio.h(38): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        GpioPin(GPIO_TypeDef* port, uint16_t pin, GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                                     ^
+../USER/gpio.h(41): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        virtual void Configure(GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                  ^
+../USER/gpio.h(47): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Push_Pull(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                    ^
+../USER/gpio.h(48): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Open_Drain(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                     ^
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(38): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual size_t Write(const uint8_t* data, size_t len) override;
+                                                              ^
+../USER/uart.h(43): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual int Read() override;      // trả về byte (0..255) hoặc -1
+                           ^
+../USER/uart.h(44): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual int Available() override; // 0 hoặc 1 (polling)
+                                ^
+../USER/uart.h(34): warning: use of old-style cast [-Wold-style-cast]
+        virtual void Begin(uint32_t baud, uint16_t parity = USART_Parity_No, uint16_t stopBits = USART_StopBits_1);
+                                                            ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(153): note: expanded from macro 'USART_Parity_No'
+#define USART_Parity_No                      ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(34): warning: use of old-style cast [-Wold-style-cast]
+        virtual void Begin(uint32_t baud, uint16_t parity = USART_Parity_No, uint16_t stopBits = USART_StopBits_1);
+                                                                                                 ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(137): note: expanded from macro 'USART_StopBits_1'
+#define USART_StopBits_1                     ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/uart.cpp(7): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA9
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(7): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA9
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(7): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA9
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(7): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA9
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(8): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA2
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(8): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA2
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(8): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA2
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(8): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA2
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(9): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB10
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(9): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB10
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(9): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB10
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1324): note: expanded from macro 'GPIOB_BASE'
+#define GPIOB_BASE            (APB2PERIPH_BASE + 0x0C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(9): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB10
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(10): warning: use of old-style cast [-Wold-style-cast]
+        return GPIOA;
+               ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(10): warning: use of old-style cast [-Wold-style-cast]
+        return GPIOA;
+               ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(14): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_9;  // USART1_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(14): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_9;  // USART1_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(14): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_9;  // USART1_TX
+                                ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(135): note: expanded from macro 'GPIO_Pin_9'
+#define GPIO_Pin_9                 ((uint16_t)0x0200)  /*!< Pin 9 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_2;  // USART2_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_2;  // USART2_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(15): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_2;  // USART2_TX
+                                ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(128): note: expanded from macro 'GPIO_Pin_2'
+#define GPIO_Pin_2                 ((uint16_t)0x0004)  /*!< Pin 2 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(16): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_10; // USART3_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(16): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_10; // USART3_TX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(16): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_10; // USART3_TX
+                                ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(136): note: expanded from macro 'GPIO_Pin_10'
+#define GPIO_Pin_10                ((uint16_t)0x0400)  /*!< Pin 10 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(17): warning: use of old-style cast [-Wold-style-cast]
+        return GPIO_Pin_9;
+               ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(135): note: expanded from macro 'GPIO_Pin_9'
+#define GPIO_Pin_9                 ((uint16_t)0x0200)  /*!< Pin 9 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(21): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA10
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(21): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA10
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(21): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA10
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(21): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIOA; // PA10
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA3
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA3
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA3
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(22): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIOA; // PA3
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB11
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB11
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB11
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1324): note: expanded from macro 'GPIOB_BASE'
+#define GPIOB_BASE            (APB2PERIPH_BASE + 0x0C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(23): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIOB; // PB11
+                                ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        return GPIOA;
+               ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        return GPIOA;
+               ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/uart.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_10; // USART1_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_10; // USART1_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART1) return GPIO_Pin_10; // USART1_RX
+                                ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(136): note: expanded from macro 'GPIO_Pin_10'
+#define GPIO_Pin_10                ((uint16_t)0x0400)  /*!< Pin 10 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_3;  // USART2_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_3;  // USART2_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART2) return GPIO_Pin_3;  // USART2_RX
+                                ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(129): note: expanded from macro 'GPIO_Pin_3'
+#define GPIO_Pin_3                 ((uint16_t)0x0008)  /*!< Pin 3 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(30): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_11; // USART3_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(30): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_11; // USART3_RX
+                 ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(30): warning: use of old-style cast [-Wold-style-cast]
+        if (u == USART3) return GPIO_Pin_11; // USART3_RX
+                                ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(137): note: expanded from macro 'GPIO_Pin_11'
+#define GPIO_Pin_11                ((uint16_t)0x0800)  /*!< Pin 11 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(31): warning: use of old-style cast [-Wold-style-cast]
+        return GPIO_Pin_10;
+               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(136): note: expanded from macro 'GPIO_Pin_10'
+#define GPIO_Pin_10                ((uint16_t)0x0400)  /*!< Pin 10 selected */
+                                    ^         ~~~~~~
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(11): warning: In file included from...
+../USER/gpio.h(31): warning: padding size of 'GpioPin' with 2 bytes to alignment boundary [-Wpadded]
+class GpioPin {
+      ^
+../USER/uart.cpp(48): warning: use of old-style cast [-Wold-style-cast]
+                RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+                                       ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(509): note: expanded from macro 'RCC_APB2Periph_USART1'
+#define RCC_APB2Periph_USART1            ((uint32_t)0x00004000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART2) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART2) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART2) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+                                                             ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(539): note: expanded from macro 'RCC_APB1Periph_USART2'
+#define RCC_APB1Periph_USART2            ((uint32_t)0x00020000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART3) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART3) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+                if (usart_ == USART3) RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+                                                             ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(540): note: expanded from macro 'RCC_APB1Periph_USART3'
+#define RCC_APB1Periph_USART3            ((uint32_t)0x00040000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(58): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        tx_.Configure(GPIO_Mode::AF_PUSH_PULL, GPIO_Speed::MHZ_50);
+                      ^
+../USER/uart.cpp(58): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        tx_.Configure(GPIO_Mode::AF_PUSH_PULL, GPIO_Speed::MHZ_50);
+                                               ^
+../USER/uart.cpp(59): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        rx_.Configure(GPIO_Mode::INPUT_FLOATING);
+                      ^
+../USER/uart.cpp(62): warning: use of old-style cast [-Wold-style-cast]
+bool Uart::Is_APB2() const { return usart_ == USART1; }
+                                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(62): warning: use of old-style cast [-Wold-style-cast]
+bool Uart::Is_APB2() const { return usart_ == USART1; }
+                                              ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(66): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART1) return RCC_APB2Periph_USART1;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(66): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART1) return RCC_APB2Periph_USART1;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(66): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART1) return RCC_APB2Periph_USART1;
+                                     ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(509): note: expanded from macro 'RCC_APB2Periph_USART1'
+#define RCC_APB2Periph_USART1            ((uint32_t)0x00004000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(67): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART2) return RCC_APB1Periph_USART2;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1308): note: expanded from macro 'USART2_BASE'
+#define USART2_BASE           (APB1PERIPH_BASE + 0x4400)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(67): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART2) return RCC_APB1Periph_USART2;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1402): note: expanded from macro 'USART2'
+#define USART2              ((USART_TypeDef *) USART2_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(67): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART2) return RCC_APB1Periph_USART2;
+                                     ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(539): note: expanded from macro 'RCC_APB1Periph_USART2'
+#define RCC_APB1Periph_USART2            ((uint32_t)0x00020000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(68): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART3) return RCC_APB1Periph_USART3;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1309): note: expanded from macro 'USART3_BASE'
+#define USART3_BASE           (APB1PERIPH_BASE + 0x4800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1290): note: expanded from macro 'APB1PERIPH_BASE'
+#define APB1PERIPH_BASE       PERIPH_BASE
+                              ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/uart.cpp(68): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART3) return RCC_APB1Periph_USART3;
+                      ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1403): note: expanded from macro 'USART3'
+#define USART3              ((USART_TypeDef *) USART3_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/uart.cpp(68): warning: use of old-style cast [-Wold-style-cast]
+        if (usart_ == USART3) return RCC_APB1Periph_USART3;
+                                     ^~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(540): note: expanded from macro 'RCC_APB1Periph_USART3'
+#define RCC_APB1Periph_USART3            ((uint32_t)0x00040000)
+                                          ^         ~~~~~~~~~~
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(7): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(90): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(49): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+../USER/uart.cpp(77): warning: use of old-style cast [-Wold-style-cast]
+        cfg.USART_WordLength          = USART_WordLength_8b;
+                                        ^~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(124): note: expanded from macro 'USART_WordLength_8b'
+#define USART_WordLength_8b                  ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/uart.cpp(80): warning: use of old-style cast [-Wold-style-cast]
+        cfg.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(177): note: expanded from macro 'USART_HardwareFlowControl_None'
+#define USART_HardwareFlowControl_None       ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/uart.cpp(81): warning: use of old-style cast [-Wold-style-cast]
+        cfg.USART_Mode                = USART_Mode_Rx | USART_Mode_Tx;
+                                        ^~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(167): note: expanded from macro 'USART_Mode_Rx'
+#define USART_Mode_Rx                        ((uint16_t)0x0004)
+                                              ^         ~~~~~~
+../USER/uart.cpp(81): warning: use of old-style cast [-Wold-style-cast]
+        cfg.USART_Mode                = USART_Mode_Rx | USART_Mode_Tx;
+                                                        ^~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(168): note: expanded from macro 'USART_Mode_Tx'
+#define USART_Mode_Tx                        ((uint16_t)0x0008)
+                                              ^         ~~~~~~
+../USER/uart.cpp(100): warning: use of old-style cast [-Wold-style-cast]
+        while (USART_GetFlagStatus(usart_, USART_FLAG_TXE) == RESET) {}
+                                           ^~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(335): note: expanded from macro 'USART_FLAG_TXE'
+#define USART_FLAG_TXE                       ((uint16_t)0x0080)
+                                              ^         ~~~~~~
+../USER/uart.cpp(101): warning: use of old-style cast [-Wold-style-cast]
+        USART_SendData(usart_, (uint16_t)c);
+                               ^         ~
+../USER/uart.cpp(102): warning: use of old-style cast [-Wold-style-cast]
+        while (USART_GetFlagStatus(usart_, USART_FLAG_TC) == RESET) {}
+                                           ^~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(336): note: expanded from macro 'USART_FLAG_TC'
+#define USART_FLAG_TC                        ((uint16_t)0x0040)
+                                              ^         ~~~~~~
+../USER/uart.cpp(109): warning: use of old-style cast [-Wold-style-cast]
+                Write_Char((char)data[i]);
+                           ^     ~~~~~~~
+../USER/uart.cpp(116): warning: use of old-style cast [-Wold-style-cast]
+        return (USART_GetFlagStatus(usart_, USART_FLAG_RXNE) == SET) ? 1 : 0;
+                                            ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(337): note: expanded from macro 'USART_FLAG_RXNE'
+#define USART_FLAG_RXNE                      ((uint16_t)0x0020)
+                                              ^         ~~~~~~
+../USER/uart.cpp(122): warning: use of old-style cast [-Wold-style-cast]
+        return (int)(USART_ReceiveData(usart_) & 0xFF);
+               ^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/uart.cpp(1): warning: In file included from...
+../USER/uart.h(14): warning: 'IByteWriter' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+struct IByteWriter {
+       ^
+../USER/uart.h(20): warning: 'IByteReader' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+struct IByteReader {
+       ^
+95 warnings generated.
+compiling uart.cpp...
+../USER/main.cpp(7): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\FreeRTOS.h(58): warning: In file included from...
+./RTE/RTOS\FreeRTOSConfig.h(359): warning: '__ARM_ARCH_7A__' is not defined, evaluates to 0 [-Wundef]
+#if (__ARM_ARCH_7A__ == 1U)
+     ^
+../USER/main.cpp(7): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\FreeRTOS.h(108): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/portable.h(53): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/portable/GCC/ARM_CM3\portmacro.h(200): warning: use of old-style cast [-Wold-style-cast]
+        xReturn = pdFALSE;
+                  ^~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(52): note: expanded from macro 'pdFALSE'
+#define pdFALSE                                  ( ( BaseType_t ) 0 )
+                                                   ^              ~
+../USER/main.cpp(7): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\FreeRTOS.h(108): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/portable.h(53): warning: In file included from...
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/portable/GCC/ARM_CM3\portmacro.h(204): warning: use of old-style cast [-Wold-style-cast]
+        xReturn = pdTRUE;
+                  ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(53): note: expanded from macro 'pdTRUE'
+#define pdTRUE                                   ( ( BaseType_t ) 1 )
+                                                   ^              ~
+../USER/main.cpp(11): warning: In file included from...
+../USER/gpio.h(14): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Speed {
+     ^
+../USER/gpio.h(20): warning: scoped enumerations are incompatible with C++98 [-Wc++98-compat]
+enum class GPIO_Mode {
+     ^
+../USER/gpio.h(31): warning: 'GpioPin' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+class GpioPin {
+      ^
+../USER/gpio.h(38): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        GpioPin(GPIO_TypeDef* port, uint16_t pin, GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                                     ^
+../USER/gpio.h(41): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        virtual void Configure(GPIO_Mode mode, GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                                  ^
+../USER/gpio.h(47): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Push_Pull(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                    ^
+../USER/gpio.h(48): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+        void As_Output_Open_Drain(GPIO_Speed speed = GPIO_Speed::MHZ_50);
+                                                     ^
+../USER/main.cpp(12): warning: In file included from...
+../USER/uart.h(38): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual size_t Write(const uint8_t* data, size_t len) override;
+                                                              ^
+../USER/uart.h(43): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual int Read() override;      // trả về byte (0..255) hoặc -1
+                           ^
+../USER/uart.h(44): warning: 'override' keyword is incompatible with C++98 [-Wc++98-compat]
+        virtual int Available() override; // 0 hoặc 1 (polling)
+                                ^
+../USER/uart.h(34): warning: use of old-style cast [-Wold-style-cast]
+        virtual void Begin(uint32_t baud, uint16_t parity = USART_Parity_No, uint16_t stopBits = USART_StopBits_1);
+                                                            ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(153): note: expanded from macro 'USART_Parity_No'
+#define USART_Parity_No                      ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/main.cpp(12): warning: In file included from...
+../USER/uart.h(34): warning: use of old-style cast [-Wold-style-cast]
+        virtual void Begin(uint32_t baud, uint16_t parity = USART_Parity_No, uint16_t stopBits = USART_StopBits_1);
+                                                                                                 ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(137): note: expanded from macro 'USART_StopBits_1'
+#define USART_StopBits_1                     ((uint16_t)0x0000)
+                                              ^         ~~~~~~
+../USER/main.cpp(45): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+static EventGroupHandle_t g_evt = NULL;                 // Event group trung tâm
+                                  ^~~~
+                                  nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(49): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin led_pin(LED_GPIO, LED_PIN, GPIO_Mode::OUT_PUSH_PULL);  // LED PC13 (active-low)
+                       ^~~~~~~~
+../USER/main.cpp(35): note: expanded from macro 'LED_GPIO'
+#define LED_GPIO           GPIOC
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1325): note: expanded from macro 'GPIOC_BASE'
+#define GPIOC_BASE            (APB2PERIPH_BASE + 0x1000)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/main.cpp(49): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin led_pin(LED_GPIO, LED_PIN, GPIO_Mode::OUT_PUSH_PULL);  // LED PC13 (active-low)
+                       ^~~~~~~~
+../USER/main.cpp(35): note: expanded from macro 'LED_GPIO'
+#define LED_GPIO           GPIOC
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                             ^                ~~~~~~~~~~
+../USER/main.cpp(49): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin led_pin(LED_GPIO, LED_PIN, GPIO_Mode::OUT_PUSH_PULL);  // LED PC13 (active-low)
+                                 ^~~~~~~
+../USER/main.cpp(36): note: expanded from macro 'LED_PIN'
+#define LED_PIN            GPIO_Pin_13
+                           ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(139): note: expanded from macro 'GPIO_Pin_13'
+#define GPIO_Pin_13                ((uint16_t)0x2000)  /*!< Pin 13 selected */
+                                    ^         ~~~~~~
+../USER/main.cpp(49): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+static GpioPin led_pin(LED_GPIO, LED_PIN, GPIO_Mode::OUT_PUSH_PULL);  // LED PC13 (active-low)
+                                          ^
+../USER/main.cpp(49): warning: declaration requires a global constructor [-Wglobal-constructors]
+static GpioPin led_pin(LED_GPIO, LED_PIN, GPIO_Mode::OUT_PUSH_PULL);  // LED PC13 (active-low)
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(11): warning: In file included from...
+../USER/gpio.h(31): warning: padding size of 'GpioPin' with 2 bytes to alignment boundary [-Wpadded]
+class GpioPin {
+      ^
+../USER/main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin btn_pin(BTN_GPIO, BTN_PIN, GPIO_Mode::INPUT_PULL_UP);                      // Button PA0 (kéo lên, nhấn=0)
+                       ^~~~~~~~
+../USER/main.cpp(33): note: expanded from macro 'BTN_GPIO'
+#define BTN_GPIO           GPIOA
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin btn_pin(BTN_GPIO, BTN_PIN, GPIO_Mode::INPUT_PULL_UP);                      // Button PA0 (kéo lên, nhấn=0)
+                       ^~~~~~~~
+../USER/main.cpp(33): note: expanded from macro 'BTN_GPIO'
+#define BTN_GPIO           GPIOA
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+../USER/main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+static GpioPin btn_pin(BTN_GPIO, BTN_PIN, GPIO_Mode::INPUT_PULL_UP);                      // Button PA0 (kéo lên, nhấn=0)
+                                 ^~~~~~~
+../USER/main.cpp(34): note: expanded from macro 'BTN_PIN'
+#define BTN_PIN            GPIO_Pin_0
+                           ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(126): note: expanded from macro 'GPIO_Pin_0'
+#define GPIO_Pin_0                 ((uint16_t)0x0001)  /*!< Pin 0 selected */
+                                    ^         ~~~~~~
+../USER/main.cpp(50): warning: enumeration type in nested name specifier is incompatible with C++98 [-Wc++98-compat]
+static GpioPin btn_pin(BTN_GPIO, BTN_PIN, GPIO_Mode::INPUT_PULL_UP);                      // Button PA0 (kéo lên, nhấn=0)
+                                          ^
+../USER/main.cpp(50): warning: declaration requires a global constructor [-Wglobal-constructors]
+static GpioPin btn_pin(BTN_GPIO, BTN_PIN, GPIO_Mode::INPUT_PULL_UP);                      // Button PA0 (kéo lên, nhấn=0)
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+static Uart    uart1(USART1, 115200);                                                     // UART1 PA9/PA10 @115200
+                     ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1335): note: expanded from macro 'USART1_BASE'
+#define USART1_BASE           (APB2PERIPH_BASE + 0x3800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/main.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+static Uart    uart1(USART1, 115200);                                                     // UART1 PA9/PA10 @115200
+                     ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1428): note: expanded from macro 'USART1'
+#define USART1              ((USART_TypeDef *) USART1_BASE)
+                             ^                 ~~~~~~~~~~~
+../USER/main.cpp(51): warning: declaration requires an exit-time destructor [-Wexit-time-destructors]
+static Uart    uart1(USART1, 115200);                                                     // UART1 PA9/PA10 @115200
+               ^
+../USER/main.cpp(51): warning: declaration requires a global destructor [-Wglobal-constructors]
+../USER/main.cpp(75): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        if (g_evt == NULL) {
+                     ^~~~
+                     nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(83): warning: use of old-style cast [-Wold-style-cast]
+        xTaskCreate(Task_Main,   "Main",   256, NULL, tskIDLE_PRIORITY + 3, NULL);
+                                                      ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\task.h(199): note: expanded from macro 'tskIDLE_PRIORITY'
+#define tskIDLE_PRIORITY    ( ( UBaseType_t ) 0U )
+                              ^               ~~
+../USER/main.cpp(83): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Main,   "Main",   256, NULL, tskIDLE_PRIORITY + 3, NULL);
+                                                ^~~~
+                                                nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(83): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Main,   "Main",   256, NULL, tskIDLE_PRIORITY + 3, NULL);
+                                                                            ^~~~
+                                                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(84): warning: use of old-style cast [-Wold-style-cast]
+        xTaskCreate(Task_Button, "Button", 192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                      ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\task.h(199): note: expanded from macro 'tskIDLE_PRIORITY'
+#define tskIDLE_PRIORITY    ( ( UBaseType_t ) 0U )
+                              ^               ~~
+../USER/main.cpp(84): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Button, "Button", 192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                ^~~~
+                                                nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(84): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Button, "Button", 192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                                            ^~~~
+                                                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(85): warning: use of old-style cast [-Wold-style-cast]
+        xTaskCreate(Task_UART,   "UART",   192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                      ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\task.h(199): note: expanded from macro 'tskIDLE_PRIORITY'
+#define tskIDLE_PRIORITY    ( ( UBaseType_t ) 0U )
+                              ^               ~~
+../USER/main.cpp(85): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_UART,   "UART",   192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                ^~~~
+                                                nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(85): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_UART,   "UART",   192, NULL, tskIDLE_PRIORITY + 2, NULL);
+                                                                            ^~~~
+                                                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(86): warning: use of old-style cast [-Wold-style-cast]
+        xTaskCreate(Task_Blink,  "Blink",  192, NULL, tskIDLE_PRIORITY + 1, NULL);
+                                                      ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include\task.h(199): note: expanded from macro 'tskIDLE_PRIORITY'
+#define tskIDLE_PRIORITY    ( ( UBaseType_t ) 0U )
+                              ^               ~~
+../USER/main.cpp(86): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Blink,  "Blink",  192, NULL, tskIDLE_PRIORITY + 1, NULL);
+                                                ^~~~
+                                                nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(86): warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        xTaskCreate(Task_Blink,  "Blink",  192, NULL, tskIDLE_PRIORITY + 1, NULL);
+                                                                            ^~~~
+                                                                            nullptr
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(56): note: expanded from macro 'NULL'
+#define NULL 0                   /* see <stddef.h> */
+             ^
+../USER/main.cpp(95): warning: use of old-style cast [-Wold-style-cast]
+        NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+                                 ^~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\misc.h(148): note: expanded from macro 'NVIC_PriorityGroup_4'
+#define NVIC_PriorityGroup_4         ((uint32_t)0x300) /*!< 4 bits for pre-emption priority
+                                      ^         ~~~~~
+../USER/main.cpp(121): warning: use of old-style cast [-Wold-style-cast]
+static inline void LED_Off(void) { GPIO_SetBits(LED_GPIO, LED_PIN); }
+                                                ^~~~~~~~
+../USER/main.cpp(35): note: expanded from macro 'LED_GPIO'
+#define LED_GPIO           GPIOC
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                                              ^~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1325): note: expanded from macro 'GPIOC_BASE'
+#define GPIOC_BASE            (APB2PERIPH_BASE + 0x1000)
+                               ^~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+../USER/main.cpp(121): warning: use of old-style cast [-Wold-style-cast]
+static inline void LED_Off(void) { GPIO_SetBits(LED_GPIO, LED_PIN); }
+                                                ^~~~~~~~
+../USER/main.cpp(35): note: expanded from macro 'LED_GPIO'
+#define LED_GPIO           GPIOC
+                           ^~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1418): note: expanded from macro 'GPIOC'
+#define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
+                             ^                ~~~~~~~~~~
+../USER/main.cpp(121): warning: use of old-style cast [-Wold-style-cast]
+static inline void LED_Off(void) { GPIO_SetBits(LED_GPIO, LED_PIN); }
+                                                          ^~~~~~~
+../USER/main.cpp(36): note: expanded from macro 'LED_PIN'
+#define LED_PIN            GPIO_Pin_13
+                           ^~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(139): note: expanded from macro 'GPIO_Pin_13'
+#define GPIO_Pin_13                ((uint16_t)0x2000)  /*!< Pin 13 selected */
+                                    ^         ~~~~~~
+../USER/main.cpp(134): warning: use of old-style cast [-Wold-style-cast]
+        return pdMS_TO_TICKS(half_ms);
+               ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                               ^            ~~~~~~~~~~~~~
+../USER/main.cpp(134): warning: use of old-style cast [-Wold-style-cast]
+        return pdMS_TO_TICKS(half_ms);
+               ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                         ^~~~~~~~~~~~~~~~~~
+./RTE/RTOS\FreeRTOSConfig.h(64): note: expanded from macro 'configTICK_RATE_HZ'
+#define configTICK_RATE_HZ                        ((TickType_t)1000)
+                                                   ^           ~~~~
+../USER/main.cpp(134): warning: use of old-style cast [-Wold-style-cast]
+        return pdMS_TO_TICKS(half_ms);
+               ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                            ^            ~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(134): warning: use of old-style cast [-Wold-style-cast]
+        return pdMS_TO_TICKS(half_ms);
+               ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                                                ^            ~~~~~
+../USER/main.cpp(134): warning: use of old-style cast [-Wold-style-cast]
+        return pdMS_TO_TICKS(half_ms);
+               ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                            ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(148): warning: use of old-style cast [-Wold-style-cast]
+                        vTaskDelay(pdMS_TO_TICKS(20)); // debounce
+                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                               ^            ~~~~~~~~~~~~~
+../USER/main.cpp(148): warning: use of old-style cast [-Wold-style-cast]
+                        vTaskDelay(pdMS_TO_TICKS(20)); // debounce
+                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                         ^~~~~~~~~~~~~~~~~~
+./RTE/RTOS\FreeRTOSConfig.h(64): note: expanded from macro 'configTICK_RATE_HZ'
+#define configTICK_RATE_HZ                        ((TickType_t)1000)
+                                                   ^           ~~~~
+../USER/main.cpp(148): warning: use of old-style cast [-Wold-style-cast]
+                        vTaskDelay(pdMS_TO_TICKS(20)); // debounce
+                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                            ^            ~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(148): warning: use of old-style cast [-Wold-style-cast]
+                        vTaskDelay(pdMS_TO_TICKS(20)); // debounce
+                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                                                ^            ~~~~~
+../USER/main.cpp(148): warning: use of old-style cast [-Wold-style-cast]
+                        vTaskDelay(pdMS_TO_TICKS(20)); // debounce
+                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                            ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(152): warning: use of old-style cast [-Wold-style-cast]
+                                        vTaskDelay(pdMS_TO_TICKS(10));
+                                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                               ^            ~~~~~~~~~~~~~
+../USER/main.cpp(152): warning: use of old-style cast [-Wold-style-cast]
+                                        vTaskDelay(pdMS_TO_TICKS(10));
+                                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                         ^~~~~~~~~~~~~~~~~~
+./RTE/RTOS\FreeRTOSConfig.h(64): note: expanded from macro 'configTICK_RATE_HZ'
+#define configTICK_RATE_HZ                        ((TickType_t)1000)
+                                                   ^           ~~~~
+../USER/main.cpp(152): warning: use of old-style cast [-Wold-style-cast]
+                                        vTaskDelay(pdMS_TO_TICKS(10));
+                                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                            ^            ~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(152): warning: use of old-style cast [-Wold-style-cast]
+                                        vTaskDelay(pdMS_TO_TICKS(10));
+                                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                                                ^            ~~~~~
+../USER/main.cpp(152): warning: use of old-style cast [-Wold-style-cast]
+                                        vTaskDelay(pdMS_TO_TICKS(10));
+                                                   ^~~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                            ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(160): warning: use of old-style cast [-Wold-style-cast]
+                vTaskDelay(pdMS_TO_TICKS(5));
+                           ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                               ^            ~~~~~~~~~~~~~
+../USER/main.cpp(160): warning: use of old-style cast [-Wold-style-cast]
+                vTaskDelay(pdMS_TO_TICKS(5));
+                           ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                         ^~~~~~~~~~~~~~~~~~
+./RTE/RTOS\FreeRTOSConfig.h(64): note: expanded from macro 'configTICK_RATE_HZ'
+#define configTICK_RATE_HZ                        ((TickType_t)1000)
+                                                   ^           ~~~~
+../USER/main.cpp(160): warning: use of old-style cast [-Wold-style-cast]
+                vTaskDelay(pdMS_TO_TICKS(5));
+                           ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                            ^            ~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(160): warning: use of old-style cast [-Wold-style-cast]
+                vTaskDelay(pdMS_TO_TICKS(5));
+                           ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                                                                                                                ^            ~~~~~
+../USER/main.cpp(160): warning: use of old-style cast [-Wold-style-cast]
+                vTaskDelay(pdMS_TO_TICKS(5));
+                           ^~~~~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(42): note: expanded from macro 'pdMS_TO_TICKS'
+    #define pdMS_TO_TICKS( xTimeInMs )    ( ( TickType_t ) ( ( ( uint64_t ) ( xTimeInMs ) * ( uint64_t ) configTICK_RATE_HZ ) / ( uint64_t ) 1000U ) )
+                                            ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../USER/main.cpp(139): warning: function 'Task_Button' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+../USER/main.cpp(169): warning: use of old-style cast [-Wold-style-cast]
+        TickType_t halfTicks = HalfPeriodTicksFromHz((uint32_t)localFreq);
+                                                     ^         ~~~~~~~~~
+../USER/main.cpp(175): warning: use of old-style cast [-Wold-style-cast]
+                        pdTRUE,
+                        ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(53): note: expanded from macro 'pdTRUE'
+#define pdTRUE                                   ( ( BaseType_t ) 1 )
+                                                   ^              ~
+../USER/main.cpp(176): warning: use of old-style cast [-Wold-style-cast]
+                        pdFALSE,
+                        ^~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(52): note: expanded from macro 'pdFALSE'
+#define pdFALSE                                  ( ( BaseType_t ) 0 )
+                                                   ^              ~
+../USER/main.cpp(185): warning: use of old-style cast [-Wold-style-cast]
+                        halfTicks = HalfPeriodTicksFromHz((uint32_t)localFreq);
+                                                          ^         ~~~~~~~~~
+../USER/main.cpp(165): warning: function 'Task_Blink' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+../USER/main.cpp(198): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_UART_SEND, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                         ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(53): note: expanded from macro 'pdTRUE'
+#define pdTRUE                                   ( ( BaseType_t ) 1 )
+                                                   ^              ~
+../USER/main.cpp(198): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_UART_SEND, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                                 ^~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(52): note: expanded from macro 'pdFALSE'
+#define pdFALSE                                  ( ( BaseType_t ) 0 )
+                                                   ^              ~
+../USER/main.cpp(198): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_UART_SEND, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                                          ^~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/portable/GCC/ARM_CM3\portmacro.h(67): note: expanded from macro 'portMAX_DELAY'
+    #define portMAX_DELAY              ( TickType_t ) 0xffffffffUL
+                                       ^              ~~~~~~~~~~~~
+../USER/main.cpp(195): warning: function 'Task_UART' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+../USER/main.cpp(211): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_BTN_PRESS, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                         ^~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(53): note: expanded from macro 'pdTRUE'
+#define pdTRUE                                   ( ( BaseType_t ) 1 )
+                                                   ^              ~
+../USER/main.cpp(211): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_BTN_PRESS, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                                 ^~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/include/projdefs.h(52): note: expanded from macro 'pdFALSE'
+#define pdFALSE                                  ( ( BaseType_t ) 0 )
+                                                   ^              ~
+../USER/main.cpp(211): warning: use of old-style cast [-Wold-style-cast]
+                xEventGroupWaitBits(g_evt, EV_BTN_PRESS, pdTRUE, pdFALSE, portMAX_DELAY);
+                                                                          ^~~~~~~~~~~~~
+C:/Users/CONG THANH/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.2.0/Source/portable/GCC/ARM_CM3\portmacro.h(67): note: expanded from macro 'portMAX_DELAY'
+    #define portMAX_DELAY              ( TickType_t ) 0xffffffffUL
+                                       ^              ~~~~~~~~~~~~
+../USER/main.cpp(214): warning: enumeration value 'BLINK_50HZ' not explicitly handled in switch [-Wswitch-enum]
+                switch (g_currentFreq) {
+                        ^
+../USER/main.cpp(229): warning: C++98 requires newline at end of file [-Wc++98-compat-pedantic]
+}
+ ^
+../USER/main.cpp(208): warning: function 'Task_Main' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+../USER/main.cpp(12): warning: In file included from...
+../USER/uart.h(14): warning: 'IByteWriter' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+struct IByteWriter {
+       ^
+../USER/uart.h(20): warning: 'IByteReader' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+struct IByteReader {
+       ^
+../USER/main.cpp(111): warning: unused function 'USART1_SendChar' [-Wunused-function]
+static void USART1_SendChar(char c)
+            ^
+87 warnings generated.
+compiling main.cpp...
+linking...
+Program Size: Code=13648 RO-data=436 RW-data=12 ZI-data=13060  
+".\Objects\freertos_event_gr.axf" - 0 Error(s), 217 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.2.0.pack
+                ARM.CMSIS.6.2.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: OS Tick Version: 1.0.1
+   * Component: RTOS2 Version: 2.3.0
+   * Component: CORE Version: 6.1.1
+   * Component: SysTick Version: 1.0.5
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.11.2.0.pack
+                ARM.CMSIS-FreeRTOS.11.2.0
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: CMSIS RTOS2 Version: 11.2.0
+   * Component: Core Variant: Cortex-M Version: 11.2.0
+   * Component: Coroutines Version: 11.2.0
+   * Component: Event Groups Version: 11.2.0
+   * Component: Heap Variant: Heap_4 Version: 11.2.0
+   * Component: Timers Version: 11.2.0
+   * Component: FreeRTOS Variant: Cortex-M Version: 11.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: TIM Version: 3.6.0
+   * Component: USART Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\RTOS
+  .\RTE\_Target_1
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.2.0\CMSIS\RTOS2\FreeRTOS\Include
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.2.0\Source\include
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.2.0\Source\portable\GCC\ARM_CM3
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\ARM\CMSIS\6.2.0\CMSIS\RTOS2\Include
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+  C:\Users\CONG THANH\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:OS Tick:1.0.1 (API)
+      Include file:  CMSIS\RTOS2\Include\os_tick.h
+
+   * Component: ::CMSIS:RTOS2:2.3.0 (API)
+      Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
+
+   * Component: ARM.FreeRTOS::RTOS:Config:CMSIS RTOS2:11.2.0
+      Include file:  CMSIS\RTOS2\FreeRTOS\Config\FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:11.2.0
+      Include file:  Source\include\FreeRTOS.h
+      Source file:   Source\list.c
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\semphr.h
+      Include file:  Source\include\task.h
+      Source file:   Source\queue.c
+      Source file:   Source\tasks.c
+      Source file:   Source\portable\GCC\ARM_CM3\port.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Coroutines:11.2.0
+      Source file:   Source\croutine.c
+      Include file:  Source\include\croutine.h
+
+   * Component: ARM.FreeRTOS::RTOS:Event Groups:11.2.0
+      Include file:  Source\include\event_groups.h
+      Source file:   Source\event_groups.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:11.2.0
+      Source file:   Source\portable\MemMang\heap_4.c
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:11.2.0
+      Source file:   Source\timers.c
+      Include file:  Source\include\timers.h
+
+   * Component: ARM::CMSIS:CORE:6.1.1
+
+   * Component: ARM::CMSIS:OS Tick:SysTick:1.0.5
+      Source file:   CMSIS\RTOS2\Source\os_systick.c
+
+   * Component: ARM::CMSIS:RTOS2:FreeRTOS:Cortex-M:11.2.0
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\clib_os.c
+      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\cmsis_os2.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
