@@ -32,7 +32,7 @@
 //#include "misc.h"               // NVIC (nếu cần)
 
 // Thời gian ngủ (giây). Đổi sang 10 để test nhanh.
-#define SLEEP_SECONDS 60
+#define SLEEP_SECONDS 10
 
 
 // Hàm delay ms đơn giản bằng vòng lặp bận (không chính xác tuyệt đối nhưng đủ cho demo)
