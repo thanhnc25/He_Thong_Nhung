@@ -1,0 +1,3 @@
+[submodule "STM32_DS1307_LCD_LowPower"]
+	path = STM32_DS1307_LCD_LowPower
+	url = https://github.com/thanhnc25/STM32_DS1307_LCD_LowPower.git
